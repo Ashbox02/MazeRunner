@@ -17,6 +17,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 io.on("connection", (socket) => {
+  console.log("connection");
   socket.on("/addPlayer", (playerData) => {
     console.log("Adding player.");
     game.addPlayer(socket, playerData);
