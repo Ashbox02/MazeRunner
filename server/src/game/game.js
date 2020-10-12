@@ -17,7 +17,8 @@ class Game {
     this.enemies.push(new Enemy(10, 9, this.maze.getMaze()));
     this.enemies.push(new Enemy(10, 10, this.maze.getMaze()));
     this.enemies.push(new Enemy(10, 11, this.maze.getMaze()));
-
+    this.enemies.push(new Enemy(10, 12, this.maze.getMaze()));
+    this.enemies.push(new Enemy(10, 13, this.maze.getMaze()));
 
     setInterval(this.update.bind(this), 1000 / 60);
   }

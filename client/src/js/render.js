@@ -27,8 +27,6 @@ function render() {
     const { maze, enemies, player, otherPlayers } = getCurrentState();
     if (!player) return;
 
-    console.log(getCurrentState());
-
     ctx.fillStyle = "WHITE";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     renderGrid(maze);
