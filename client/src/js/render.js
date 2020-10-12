@@ -1,5 +1,5 @@
 import { getCurrentState } from "./gameUpdate.js";
-import { NUM_TILES_WIDTH, NUM_TILES_HEIGHT } from "../../../Constants/constantClient.js";
+import { NUM_TILES_WIDTH, NUM_TILES_HEIGHT } from "./constantClient.js";
 
 const canvas = document.getElementById("display");
 const ctx = canvas.getContext("2d");
