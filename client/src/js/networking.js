@@ -1,7 +1,7 @@
 import { processGameUpdate } from "./gameUpdate.js";
 
-const ENDPOINT = window.location.hostname + "/";
-const socket = io(ENDPOINT);
+const ENDPOINT = window.location.hostname;
+const socket = io.connect(ENDPOINT, { secure: true });
 
 const connectedPromise = new Promise((resolve => {
     socket.on("connect", () => {
