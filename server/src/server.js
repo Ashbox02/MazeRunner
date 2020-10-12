@@ -11,13 +11,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(router);
-app.use((req, res) => res.sendFile("../../client/html/index.html", { root: __dirname }));
 
 const server = http.createServer(app);
 const io = socketio(server);
 
 io.on("connection", (socket) => {
-  console.log("connection");
   socket.on("/addPlayer", (playerData) => {
     console.log("Adding player.");
     game.addPlayer(socket, playerData);
